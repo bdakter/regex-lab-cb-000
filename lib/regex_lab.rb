@@ -26,7 +26,7 @@ end
 
 phone_regex = %r{
   \b        # word boundry
-  \(       # first optional paren
+  \W       # first optional paren
   \d{3}     # area code
   [\s\W)]?  # second optional paren or space
   \d{3}     # exchange
