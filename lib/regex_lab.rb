@@ -35,4 +35,4 @@ phone_regex = %r{
   \b
 }x
 
-p "2438894546".scan(phone_regex)
+p "2438894546 (718)891-1313".scan(phone_regex)
