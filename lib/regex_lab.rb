@@ -27,7 +27,7 @@ def valid_phone_number?(phone)
     \d{4}     # last 4 digits
     \b
   }x
-  if phone.scan(phone_regex).strip > 0
+  if phone.scan(phone_regex).size > 0
     true
   else
     false
