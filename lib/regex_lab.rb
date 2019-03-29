@@ -27,7 +27,10 @@ def valid_phone_number?(phone)
     \d{4}     # last 4 digits
     \b
   }x
-  phone.scan(phone_regex) ? true : false
+  if phone.scan(phone_regex).strip > 0
+    true
+  else
+    false
 end
 
 # valid_numbers = ["24388945461", "(718)891-1313", "234 435 9978", "(800)4261134"]
@@ -47,4 +50,5 @@ phone_regex = %r{
   \b
 }x
 
-p "askfsfks".scan(phone_regex)
+p valid_phone_number?("asfsdk")
+# p "askfsfks".scan(phone_regex)
