@@ -23,3 +23,17 @@ valid_numbers = ["24388945461", "(718)891-1313", "234 435 9978", "(800)4261134"]
 p valid_numbers.all? do |i|
   valid_phone_number?(i)
 end
+
+phone_regex = %r{
+  \b        # word boundry
+  \(?       # first optional paren
+  \d{3}     # area code
+  [\s\W)]?  # second optional paren or space
+  \d{3}     # exchange
+  [\s\W]?   # separating chars 
+  \d{4}     # last 4 digits
+  \b  
+}x
+
+p "1234567890".scan(phone_regex)
+
