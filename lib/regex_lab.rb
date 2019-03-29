@@ -25,7 +25,6 @@ end
 # end
 
 phone_regex = %r{
-
   \(?     # first optional paren
   \d{3}     # area code
   [\s\W)]?  # second optional paren or space
@@ -35,4 +34,4 @@ phone_regex = %r{
   \b
 }x
 
-p "2438894546 (718)891-1313".scan(phone_regex)
+p "2438894546 (718)891-1313 234 435 9978".scan(phone_regex)
