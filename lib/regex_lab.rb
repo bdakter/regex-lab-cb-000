@@ -19,7 +19,7 @@ def valid_phone_number?(phone)
 end
 
 # valid_numbers = ["24388945461", "(718)891-1313", "234 435 9978", "(800)4261134"]
-# 
+#
 # p valid_numbers.all? do |i|
 #   valid_phone_number?(i)
 # end
