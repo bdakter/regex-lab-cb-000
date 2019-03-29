@@ -30,10 +30,9 @@ phone_regex = %r{
   \d{3}     # area code
   [\s\W)]?  # second optional paren or space
   \d{3}     # exchange
-  [\s\W]?   # separating chars 
+  [\s\W]?   # separating chars
   \d{4}     # last 4 digits
-  \b  
+  \b
 }x
 
 p "1234567890".scan(phone_regex)
-
