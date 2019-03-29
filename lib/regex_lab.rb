@@ -15,17 +15,18 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 
-phone_regex = %r{
-  \(?       # first optional paren
-  \d{3}     # area code
-  [\s\W)]?  # second optional paren or space
-  \d{3}     # exchange
-  [\s\W]?   # separating chars
-  \d{4}     # last 4 digits
-  \b
-}x
+
 
 def valid_phone_number?(phone)
+  phone_regex = %r{
+    \(?       # first optional paren
+    \d{3}     # area code
+    [\s\W)]?  # second optional paren or space
+    \d{3}     # exchange
+    [\s\W]?   # separating chars
+    \d{4}     # last 4 digits
+    \b
+  }x
   phone.scan(phone_regex) ? true : false
 end
 
