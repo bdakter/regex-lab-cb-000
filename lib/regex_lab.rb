@@ -18,11 +18,11 @@ def valid_phone_number?(phone)
   phone.scan(/\b\(?\d{3}[\s\W)]?\d{3}[\s\W]?\d{4}\b/) ? true : false
 end
 
-valid_numbers = ["24388945461", "(718)891-1313", "234 435 9978", "(800)4261134"]
-
-p valid_numbers.all? do |i|
-  valid_phone_number?(i)
-end
+# valid_numbers = ["24388945461", "(718)891-1313", "234 435 9978", "(800)4261134"]
+# 
+# p valid_numbers.all? do |i|
+#   valid_phone_number?(i)
+# end
 
 phone_regex = %r{
   \b        # word boundry
@@ -35,4 +35,4 @@ phone_regex = %r{
   \b
 }x
 
-p "1234567890".scan(phone_regex)
+p "24388945461".scan(phone_regex)
