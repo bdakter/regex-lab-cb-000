@@ -48,5 +48,3 @@ phone_regex = %r{
 }x
 
 p "askfsfks".scan(phone_regex)
-
-
